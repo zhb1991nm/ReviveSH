@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A405B9ED-0688-47A5-8CCD-9B02AE85AD04</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ReviveSH</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EF21F753BB53BD16DA4E3F756751411CCB0BD67D</key>
+		<string>https://github.com/zhb1991nm/ReviveSH.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ReviveSH/ReviveSH.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EF21F753BB53BD16DA4E3F756751411CCB0BD67D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zhb1991nm/ReviveSH.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EF21F753BB53BD16DA4E3F756751411CCB0BD67D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EF21F753BB53BD16DA4E3F756751411CCB0BD67D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ReviveSH</string>
+		</dict>
+	</array>
+</dict>
+</plist>
