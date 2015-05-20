@@ -24,6 +24,8 @@
 		FD053B9B1B0B79DD00AF1EE1 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD053B981B0B79DD00AF1EE1 /* NSUserDefaults+RMSaveCustomObject.m */; };
 		FD053BA11B0B7AAB00AF1EE1 /* HomePageWaterFallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD053BA01B0B7AAB00AF1EE1 /* HomePageWaterFallCell.m */; };
 		FD053BA61B0B7FB900AF1EE1 /* HomePageDetailViewCoontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = FD053BA51B0B7FB900AF1EE1 /* HomePageDetailViewCoontroller.m */; };
+		FD1CF1211B0CDB1B00C639F0 /* BaseUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1CF1201B0CDB1B00C639F0 /* BaseUIView.m */; };
+		FD1CF1241B0CDB4700C639F0 /* HomePageDetailPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1CF1231B0CDB4700C639F0 /* HomePageDetailPlayerView.m */; };
 		FD3F80DD1B00E765001F272D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3F80DC1B00E765001F272D /* main.m */; };
 		FD3F80E01B00E765001F272D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3F80DF1B00E765001F272D /* AppDelegate.m */; };
 		FD3F80E31B00E765001F272D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3F80E21B00E765001F272D /* ViewController.m */; };
@@ -82,6 +84,10 @@
 		FD053BA41B0B7FB900AF1EE1 /* HomePageDetailViewCoontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageDetailViewCoontroller.h; sourceTree = "<group>"; };
 		FD053BA51B0B7FB900AF1EE1 /* HomePageDetailViewCoontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageDetailViewCoontroller.m; sourceTree = "<group>"; };
 		FD053BC81B0B870C00AF1EE1 /* ReviveSH copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ReviveSH copy-Info.plist"; path = "/Users/zhb/Documents/ReviveSH/ReviveSH/ReviveSH copy-Info.plist"; sourceTree = "<absolute>"; };
+		FD1CF11F1B0CDB1B00C639F0 /* BaseUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUIView.h; sourceTree = "<group>"; };
+		FD1CF1201B0CDB1B00C639F0 /* BaseUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUIView.m; sourceTree = "<group>"; };
+		FD1CF1221B0CDB4700C639F0 /* HomePageDetailPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageDetailPlayerView.h; sourceTree = "<group>"; };
+		FD1CF1231B0CDB4700C639F0 /* HomePageDetailPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageDetailPlayerView.m; sourceTree = "<group>"; };
 		FD3F80D71B00E765001F272D /* ReviveSH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviveSH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F80DB1B00E765001F272D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3F80DC1B00E765001F272D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -187,6 +193,8 @@
 				FD053B8C1B0B77E200AF1EE1 /* BaseNavigationController.h */,
 				FD053B8D1B0B77E200AF1EE1 /* BaseNavigationController.m */,
 				FD053BA31B0B7E2F00AF1EE1 /* ColorMethodHeader.h */,
+				FD1CF11F1B0CDB1B00C639F0 /* BaseUIView.h */,
+				FD1CF1201B0CDB1B00C639F0 /* BaseUIView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -208,6 +216,8 @@
 				FD053BA01B0B7AAB00AF1EE1 /* HomePageWaterFallCell.m */,
 				FD053BA41B0B7FB900AF1EE1 /* HomePageDetailViewCoontroller.h */,
 				FD053BA51B0B7FB900AF1EE1 /* HomePageDetailViewCoontroller.m */,
+				FD1CF1221B0CDB4700C639F0 /* HomePageDetailPlayerView.h */,
+				FD1CF1231B0CDB4700C639F0 /* HomePageDetailPlayerView.m */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -431,6 +441,7 @@
 				FD3F80E31B00E765001F272D /* ViewController.m in Sources */,
 				FD053B9A1B0B79DD00AF1EE1 /* NSObject+RMCopyable.m in Sources */,
 				FD053B851B0B6C0900AF1EE1 /* BaseEntity.m in Sources */,
+				FD1CF1241B0CDB4700C639F0 /* HomePageDetailPlayerView.m in Sources */,
 				FD053B861B0B6C0900AF1EE1 /* BaseViewController.m in Sources */,
 				FD053B921B0B798F00AF1EE1 /* RMMapper.m in Sources */,
 				FD053BA61B0B7FB900AF1EE1 /* HomePageDetailViewCoontroller.m in Sources */,
@@ -439,6 +450,7 @@
 				FD053B7C1B0B6B3700AF1EE1 /* ZHBRefreshIndictorView.m in Sources */,
 				FD053B8E1B0B77E200AF1EE1 /* BaseNavigationController.m in Sources */,
 				FD053B7A1B0B6B3700AF1EE1 /* MMMaterialDesignSpinner.m in Sources */,
+				FD1CF1211B0CDB1B00C639F0 /* BaseUIView.m in Sources */,
 				FD053B9B1B0B79DD00AF1EE1 /* NSUserDefaults+RMSaveCustomObject.m in Sources */,
 				FD053B7D1B0B6B3700AF1EE1 /* ZHBRefreshScrollView.m in Sources */,
 				FD053B8B1B0B6F0500AF1EE1 /* HomePageViewController.m in Sources */,

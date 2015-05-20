@@ -7,10 +7,13 @@
 //
 
 #import "HomePageDetailViewCoontroller.h"
+#import "ImagePlayerView.h"
 
-@interface HomePageDetailViewCoontroller()
+@interface HomePageDetailViewCoontroller()<ImagePlayerViewDelegate>
 
-@property (nonatomic,strong) UIScrollView *pagedScrollView;
+@property (nonatomic,strong) UIScrollView *contentScrollView;
+
+@property (nonatomic,strong) ImagePlayerView *imagePlayerView;
 
 @end
 
@@ -18,31 +21,33 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    [self.view addSubview:[[UIView alloc] init]];
-    [self.view addSubview:self.pagedScrollView];
+    self.view.backgroundColor = UIColorFromRGB(0x1D1D1D);
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.view addSubview:self.contentScrollView];
+    [self.contentScrollView addSubview:self.imagePlayerView];
 }
 
 #pragma mark getter & setter
--(UIScrollView *)pagedScrollView{
-    if (!_pagedScrollView) {
-        _pagedScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 100)];
-        _pagedScrollView.pagingEnabled = YES;
-        _pagedScrollView.contentSize = CGSizeMake(_pagedScrollView.frame.size.width * 3, _pagedScrollView.frame.size.height);
-        CGFloat originX = 0;
-        for (int i = 0; i < 3;i++) {
-            UIView *view = [[UIView alloc] initWithFrame:CGRectMake(originX, 0, _pagedScrollView.frame.size.width, _pagedScrollView.frame.size.height)];
-            if (i == 0) {
-                view.backgroundColor = [UIColor redColor];
-            }else if (i == 1){
-                view.backgroundColor = [UIColor greenColor];
-            }else{
-                view.backgroundColor = [UIColor blueColor];
-            }
-            [_pagedScrollView addSubview:view];
-            originX += _pagedScrollView.frame.size.width;
-        }
+-(UIScrollView *)contentScrollView{
+    if (!_contentScrollView) {
+        _contentScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+        _contentScrollView.backgroundColor = [UIColor clearColor];
     }
-    return _pagedScrollView;
+    return _contentScrollView;
+}
+
+-(ImagePlayerView *)imagePlayerView{
+    if (!_imagePlayerView) {
+        NSArray *urlArray = @[@"http://ww1.sinaimg.cn/bmiddle/70e85378jw1dsxriz44iuj.jpg",
+                              @"http://ww2.sinaimg.cn/bmiddle/70e85378jw1ds8g2gtot8j.jpg",
+                              @"http://ww2.sinaimg.cn/large/5f5d4271gw1dt1i8rf47aj.jpg",
+                              @"http://ww4.sinaimg.cn/bmiddle/70e85378jw1dr57belktxj.jpg",
+                              @"http://ww3.sinaimg.cn/bmiddle/70e85378jw1drayzoda5dj.jpg"];
+        _imagePlayerView = [[ImagePlayerView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 200)];
+        _imagePlayerView.scrollInterval = 3.0f;
+        [_imagePlayerView initWithImageURLs:urlArray placeholder:nil delegate:self];
+    }
+    return _imagePlayerView;
 }
 
 @end
