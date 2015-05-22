@@ -10,4 +10,8 @@
 
 @interface UILabel (AttributedString)
 
+- (void)setText:(NSString *)text withLineSpacing:(CGFloat)lineSpacing;
+
++ (CGFloat)fixHeightWithText:(NSString *)text lineSpacing:(CGFloat)lineSpacing font:(UIFont *)font width:(CGFloat)width;
+
 @end
