@@ -1,19 +1,19 @@
 //
-//  HomePageDetailPlayerView.h
+//  HomePageDetailAudioPlayerCell.h
 //  ReviveSH
 //
-//  Created by zhb on 15/5/20.
+//  Created by zhb on 15/5/22.
 //  Copyright (c) 2015年 wonders. All rights reserved.
 //
 
-#import "BaseUIView.h"
+#import "BaseUITableViewCell.h"
 typedef enum : NSUInteger {
     HomePageDetailPlayerStatusStop,
     HomePageDetailPlayerStatusPlay,
     HomePageDetailPlayerStatusPause
 } HomePageDetailPlayerStatus;
 
-@interface HomePageDetailPlayerView : BaseUIView
+@interface HomePageDetailAudioPlayerCell : BaseUITableViewCell
 
 @property (nonatomic,strong) UILabel *titleLabel;
 
@@ -24,6 +24,10 @@ typedef enum : NSUInteger {
 @property (nonatomic,strong) UISlider *playerSlider;
 
 @property (nonatomic,strong) UIButton *playButton;
+
+@property (nonatomic,strong) UIButton *laudButton;//赞
+
+@property (nonatomic,strong) UILabel *laudLabel;
 
 @property (nonatomic,assign) HomePageDetailPlayerStatus playerStatus;
 
