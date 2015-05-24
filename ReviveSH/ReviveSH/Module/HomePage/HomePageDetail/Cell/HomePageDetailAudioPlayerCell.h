@@ -13,7 +13,13 @@ typedef enum : NSUInteger {
     HomePageDetailPlayerStatusPause
 } HomePageDetailPlayerStatus;
 
+@class LaudButton;
+
+typedef void(^PlayerButtonOnClickBlock)(UIButton *button);
+
 @interface HomePageDetailAudioPlayerCell : BaseUITableViewCell
+
+@property (nonatomic,strong) UILabel *originTitleLabel;
 
 @property (nonatomic,strong) UILabel *titleLabel;
 
@@ -25,10 +31,18 @@ typedef enum : NSUInteger {
 
 @property (nonatomic,strong) UIButton *playButton;
 
-@property (nonatomic,strong) UIButton *laudButton;//赞
-
-@property (nonatomic,strong) UILabel *laudLabel;
+@property (nonatomic,strong) LaudButton *laudButton;//赞
 
 @property (nonatomic,assign) HomePageDetailPlayerStatus playerStatus;
+
+@property (nonatomic,assign) NSInteger likes;
+
+@property (nonatomic,assign) NSInteger liked;
+
+@property (nonatomic,copy) PlayerButtonOnClickBlock playerButtonOnClickBlock;
+
+@end
+
+@interface LaudButton : UIButton
 
 @end

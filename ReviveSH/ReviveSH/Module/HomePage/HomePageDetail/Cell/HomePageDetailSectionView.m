@@ -22,8 +22,8 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    _titleLabel.frame = CGRectMake(HomePageDetailSectionPadding, 0, HomePageDetailSectionContentWidth, CutLineOriginY);
-    _titleCutLine.frame = CGRectMake(HomePageDetailSectionPadding, CutLineOriginY, HomePageDetailSectionContentWidth, CutLineThickness);
+    _titleLabel.frame = CGRectMake(HomePageDetailSectionPadding, 0, HomePageDetailSectionContentWidth, HomePageDetailSectionContentOriginY);
+    _titleCutLine.frame = CGRectMake(HomePageDetailSectionPadding, HomePageDetailSectionContentOriginY, HomePageDetailSectionContentWidth, CutLineThickness);
 }
 
 

@@ -24,6 +24,10 @@
         self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
         self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil];
         self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x171717);
+        NSInteger index = [self.navigationController.viewControllers indexOfObject:self];
+        if (index > 0 && index != NSNotFound) {
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.leftNavigationButton];
+        }
     }
 }
 
@@ -57,8 +61,25 @@
 
 #pragma mark - event response
 
+-(IBAction)leftNavigationButtonOnClick:(id)sender{
+    if(self.navigationController){
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 #pragma mark - private methods
 
 #pragma mark - getters and setters
+
+-(UIButton *)leftNavigationButton{
+    if (!_leftNavigationButton) {
+        _leftNavigationButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+        _leftNavigationButton.imageEdgeInsets = UIEdgeInsetsMake(4, 4, 4, 4);
+        [_leftNavigationButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [_leftNavigationButton addTarget:self action:@selector(leftNavigationButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
+        _leftNavigationButton.backgroundColor = [UIColor clearColor];
+    }
+    return _leftNavigationButton;
+}
 
 @end

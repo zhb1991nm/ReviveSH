@@ -46,7 +46,7 @@
 
 @optional
 
-- (CGFloat)waterFallView:(ZHBWaterFallView *)waterFallView heightOfCellAtIndex:(NSInteger)index;
+- (CGFloat)waterFallView:(ZHBWaterFallView *)waterFallView heightOfCellAtIndex:(NSInteger)index width:(CGFloat)width;
 
 @end
 

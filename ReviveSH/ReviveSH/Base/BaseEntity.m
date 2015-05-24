@@ -10,4 +10,16 @@
 
 @implementation BaseEntity
 
+-(instancetype)initFromDictionary:(NSDictionary *)dict{
+    return [RMMapper objectWithClass:[self class] fromDictionary:dict];
+}
+
++(instancetype)entityFromDictionary:(NSDictionary *)dict{
+    return [RMMapper objectWithClass:[self class] fromDictionary:dict];
+}
+
++(NSArray *)entityArrayFromArrayOfDictionary:(NSArray *)dictArray{
+    return [RMMapper arrayOfClass:[self class] fromArrayOfDictionary:dictArray];
+}
+
 @end

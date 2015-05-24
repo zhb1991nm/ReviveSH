@@ -10,6 +10,10 @@
 
 @interface BaseViewController : UIViewController
 
+@property (nonatomic,strong) UIButton *leftNavigationButton;
+
 -(void)viewDidFirstAppear:(BOOL)animated;
+
+-(IBAction)leftNavigationButtonOnClick:(id)sender;
 
 @end

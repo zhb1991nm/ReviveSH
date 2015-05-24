@@ -74,8 +74,8 @@
     }
     for (int i = 0; i < numberOfCell; i ++) {
         CGFloat cellHeight = 80.0f;
-        if (self.waterFallDataSource && [self.waterFallDataSource respondsToSelector:@selector(waterFallView:heightOfCellAtIndex:)]) {
-            cellHeight = [self.waterFallDataSource waterFallView:self heightOfCellAtIndex:i];
+        if (self.waterFallDataSource && [self.waterFallDataSource respondsToSelector:@selector(waterFallView:heightOfCellAtIndex:width:)]) {
+            cellHeight = [self.waterFallDataSource waterFallView:self heightOfCellAtIndex:i width:columnWidth];
         }
         NSUInteger shortestColumn = [self shortestColumn:columnHeightArray];
         NSNumber *shortestColumnHeightNum = columnHeightArray[shortestColumn];

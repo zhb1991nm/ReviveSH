@@ -13,4 +13,10 @@
 
 @interface BaseEntity : NSObject<RMMapping>
 
+-(instancetype)initFromDictionary:(NSDictionary *)dict;
+
++(instancetype)entityFromDictionary:(NSDictionary *)dict;
+
++(NSArray *)entityArrayFromArrayOfDictionary:(NSArray *)dictArray;
+
 @end
